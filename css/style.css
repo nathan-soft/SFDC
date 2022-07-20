@@ -13,12 +13,23 @@ body{
     padding-bottom: 3em;
 }
 
-.hero-text{
-    margin-left: 5em;
-}
+@media screen and (min-width: 768px) {
+    .hero-text{
+        margin-left: 4em;
+    }
+    
+    .hero-img-wrapper{
+        margin-right: 2.5em;
+    }
 
-.hero-img-wrapper{
-    margin-right: 4em;
+    @media screen and (min-width: 992px) {
+        .hero-text{
+            margin-left: 5em;
+        }
+        .hero-img-wrapper{
+            margin-right: 4em;
+        }
+    }
 }
 
 #about{
@@ -31,8 +42,38 @@ body{
 
 #about img{
     position: relative;
-    top: -6em;
+    top: -4em;
 }
+
+@media screen and (min-width: 992px) {
+    #about img{
+        top: -6em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #about>.container, #learn>.container{
+        column-gap: 0;
+    }
+
+    #about{
+        background-image: url('/images/circle-scatter-haikei.svg');
+        background-position: top;
+        background-size: auto;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    #about{
+        background-size: cover;
+    }
+}
+
+/* @media screen and (max-width: 608px) {
+    #about{
+        background-size: bottom;
+    }
+} */
 
 .top-stack, .bottom-stack{
     column-gap: 1em;
