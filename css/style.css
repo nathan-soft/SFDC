@@ -4,11 +4,55 @@ body{
 
 .wrapper{
     padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.hero-text{
+    margin-left: 5em;
+}
+
+.hero-img-wrapper{
+    margin-right: 4em;
 }
 
 #about img{
     position: relative;
-    top: -8em;
+    top: -6em;
+}
+
+.top-stack, .bottom-stack{
+    column-gap: 1em;
+    margin-top: 2em;
+}
+
+.sfdc-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    min-width: 0;
+    max-width: 10rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.sfdc-card .img-wrapper{
+   position: absolute;
+   top: -1.7em;
+   left: 50%;
+   max-width: 50px;
+   max-height: 50px;
+   transform: translateX(-50%);
+   background-color: #fff;
+   border: 1px solid white;
+   border-radius: 50%;
+   z-index: 1000;
+}
+.sfdc-card p{
+    margin-bottom: 0;
 }
 
 
