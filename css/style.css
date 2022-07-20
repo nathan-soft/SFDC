@@ -1,3 +1,9 @@
+html{
+    --dark: #666;
+    --light:#F8F9FA;
+    --accent:#4f4cc2;
+}
+
 body{
     color: #666!important;
 }
@@ -13,6 +19,14 @@ body{
 
 .hero-img-wrapper{
     margin-right: 4em;
+}
+
+#about{
+    background-color: var(--dark);
+}
+
+#about>.container, #learn>.container{
+    column-gap: 2em;
 }
 
 #about img{
@@ -31,7 +45,7 @@ body{
     flex-direction: column;
     padding: 1rem;
     min-width: 0;
-    max-width: 10rem;
+    max-width: 15rem;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
@@ -54,6 +68,7 @@ body{
 .sfdc-card p{
     margin-bottom: 0;
 }
+
 
 
 
