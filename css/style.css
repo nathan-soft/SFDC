@@ -30,6 +30,78 @@ body{
     padding-bottom: 3em;
 }
 
+nav svg {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    nav svg {
+        display: block;
+        width: 2em;
+        cursor: pointer;
+    }
+
+    .mobile-nav-content {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: var(--accent);
+        color: var(--light);
+        height: 100vh;
+        width: 50%;
+        z-index: 999;
+        box-shadow: 0 5px 3px 3px rgba(59, 58, 58, 0.125);
+        text-transform: uppercase;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .mobile-nav-content.open-nav{
+        transform: translateX(0);
+    }
+
+    .mobile-nav-content .close {
+        position: absolute;
+        top: 3.2rem;
+        right: 10px;
+        opacity: 1;
+    }
+
+    .mobile-nav-content .close:hover {
+        opacity: 0.8;
+    }
+
+    .navbar-nav{
+        flex-direction: column !important;
+        margin-top: 8rem;
+    }
+
+    .navbar-nav .nav-item{
+        text-align: center;
+    }
+
+    /* hide the register button for mobile */
+    .navbar-nav .nav-item:last-child{
+        display: none;
+    }
+
+    .navbar-nav .nav-item a {
+        color: var(--light);
+    }
+
+    .navbar-nav .nav-item a:hover, 
+    .navbar-nav .nav-item a.active, 
+    .navbar-nav .nav-item a:active {
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 377px) {
+        .mobile-nav-content {
+            width: 75%;
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     .hero-text{
         margin-left: 4em;
@@ -46,6 +118,23 @@ body{
         .hero-img-wrapper{
             margin-right: 4em;
         }
+    }
+}
+
+@media screen and (max-width: 471px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 2em;
+    }
+
+    .hero-text{
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-img-wrapper{
+        order: 0;
+        width: 80%;
     }
 }
 
@@ -90,6 +179,13 @@ body{
             background-position: bottom;
         }
     }
+
+    @media screen and (max-width: 456px) {
+        #about{
+            background-image: url('../images/blob-haikei\ \(1\).svg');
+            background-position: left;
+        }
+    }
 }
 
 #learn{
@@ -122,10 +218,9 @@ body{
    max-width: 50px;
    max-height: 50px;
    transform: translateX(-50%);
-   background-color: #fff;
-   border: 1px solid white;
+   background-color: var(--light-grey);
+   border: 2px solid white;
    border-radius: 50%;
-   z-index: 1000;
 }
 .sfdc-card p{
     margin-bottom: 0;
