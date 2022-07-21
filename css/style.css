@@ -1,11 +1,28 @@
 html{
     --dark: #666;
     --light:#F8F9FA;
+    --light-grey: #f9f9ff;
     --accent:#4f4cc2;
 }
 
 body{
     color: #666!important;
+}
+
+.cta-outline {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.cta, .cta-outline:hover {
+    background-color: var(--accent);
+    color: var(--light);
+}
+
+.cta:hover {
+    background-color: var(--accent);
+    opacity: 0.9;
+    color: var(--light);
 }
 
 .wrapper{
@@ -75,7 +92,9 @@ body{
     }
 }
 
-
+#learn{
+    background-color: var(--light-grey);
+}
 
 .top-stack, .bottom-stack{
     column-gap: 1em;
@@ -112,6 +131,15 @@ body{
     margin-bottom: 0;
 }
 
+footer p.social a:hover {
+    text-decoration: none;
+}
+
+footer p.social a i {
+    color: var(--accent);
+    font-size: 24px;
+    vertical-align: middle;
+}
 
 
 
