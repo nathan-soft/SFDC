@@ -100,7 +100,7 @@ nav svg {
         display: none;
     }
 
-    .navbar-nav .nav-item a {
+    .navbar-nav .nav-item .nav-link {
         color: var(--light);
     }
 
