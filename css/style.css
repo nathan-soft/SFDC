@@ -34,6 +34,21 @@ nav svg {
     display: none;
 }
 
+.navbar .navbar-brand,
+.navbar-nav .nav-item .nav-link {
+    color: var(--dark);
+}
+
+.navbar .navbar-brand>span{
+    color: var(--accent);
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:active
+{
+    font-weight: bold;
+}
+
 @media screen and (max-width: 576px) {
     nav svg {
         display: block;
@@ -109,6 +124,11 @@ nav svg {
     .hero-text{
         order: 1;
         text-align: center;
+    }
+
+    .hero-text .cta-outline{
+        background-color: var(--accent);
+        color: var(--light);
     }
 
     .hero-img-wrapper{
